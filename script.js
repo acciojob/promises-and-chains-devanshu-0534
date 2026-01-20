@@ -6,12 +6,12 @@ const nameInput = document.getElementById("name");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const age = ageInput.value;
+  const age = Number(ageInput.value);
   const name = nameInput.value;
 
   // Validation
-  if (age === "" || name === "") {
-    windows.alert("Please enter valid details.");
+  if (!age || name === "") {
+    window.alert("Please enter valid details");
     return;
   }
 
@@ -34,3 +34,4 @@ form.addEventListener("submit", function (e) {
       alert(error);
     });
 });
+
